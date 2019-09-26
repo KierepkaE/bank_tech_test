@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-require 'accounthistory'
+require_relative './accounthistory.rb'
+require 'date'
 class Account
   attr_reader :balance, :history_handler
 
@@ -9,13 +10,13 @@ class Account
     @balance = 0
   end
 
-  def add(amount, date = Date.today.to_s)
+  def add(amount, date = Time.now)
     @balance += amount
     amount = '%.2f' % amount
     @history_handler.add_log(date, amount, false, @balance)
   end
 
-  def withdraw(amount, date = Date.today.to_s)
+  def withdraw(amount, date = Time.now)
     @balance -= amount
     amount = '%.2f' % amount
     @history_handler.add_log(date, amount, true, @balance)

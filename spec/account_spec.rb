@@ -43,8 +43,8 @@ describe Account do
     account.add(1000, Date.new(2010, 8, 9))
     account.add(3000, Date.new(2010, 8, 9))
     account.withdraw(100, Date.new(2019, 1, 3))
-    statement = "date || credit || debit || balance\n 03/01/2019 || 100.00 ||   || 3900.00\n 09/08/2010 ||   || 3000.00 || 4000.00\n 09/08/2010 ||   || 1000.00 || 1000.00"
-
+    statement = "date || credit || debit || balance\n 2019-01-03 || 100.00 ||   || 3900.00\n 2010-08-09 ||   || 3000.00 || 4000.00\n 2010-08-09 ||   || 1000.00 || 1000.00"
+    expect(account.history_handler.account_history[0][:date]).to be_an_instance_of(Date)
     expect(account.print_statement).to eq(statement)
   end
 end
