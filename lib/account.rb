@@ -22,7 +22,6 @@ class Account
   end
 
   def history
-    p @history_handler
     @history_handler.show
   end
 

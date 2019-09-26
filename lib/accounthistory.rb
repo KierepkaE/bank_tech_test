@@ -42,7 +42,6 @@ class AccountHistory
   end
 
   def print_log(log)
-    p @account_history
     " #{log[:date].strftime('%d/%m/%Y')} || #{account_credit(log)} || #{account_debit(log)} || #{log[:balance]}"
   end
 
