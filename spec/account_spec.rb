@@ -8,6 +8,8 @@ describe Account do
     expect(account.balance).to eq 0
   end
 
+
+
   it 'can be given a deposit' do
     account = Account.new
     date = Date.new(2019,9,26)
@@ -20,15 +22,22 @@ describe Account do
     date = Date.new(2019,9,26)
     account.add(500,date)
     expect(account.balance).to eq 500
-    expect(account.history.show).should include(
+    expect(account.history_handler.show).to include(
+
      {
       date: date,
+      amount: 500.00,
       debit: false,
-      amount: '500.00',
-      balance: '500.00'
+      balance: 500.00
+
      }
     )
   end
+
+
+
 end
+
+
 
 
