@@ -43,6 +43,17 @@ describe Account do
   end
 
 
+  it 'can print account statement' do
+    account = Account.new
+    account.add(1000, Date.new(2010,8,9))
+    account.add(3000, Date.new(2010,8,9))
+    account.withdraw(100, Date.new(2019,1,3))
+    expect(account.print_statement).to eq(
+      "date || credit || debit || balance\n03/01/2019 ||  || 100.00 || 3100.00\n08/09/2010 || 3000.00 ||  || 3000.00\n08/09/2010 || 1000.00 ||  || 1000.00"
+    )
+  end
+
+
 
 end
 

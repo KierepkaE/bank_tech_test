@@ -23,5 +23,4 @@ class Account
   end
 
 
-
 end
