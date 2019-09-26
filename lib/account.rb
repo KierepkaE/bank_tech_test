@@ -12,6 +12,11 @@ class Account
     @history_handler.add_log(date,amount,false,@balance)
   end
 
+  def withdraw(amount,date = Date.today.to_s)
+    @balance -= amount
+    @history_handler.add_log(date,amount,true,@balance)
+  end
+
   def history
     p @history_handler
     @history_handler.show
