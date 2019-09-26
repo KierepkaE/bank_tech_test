@@ -7,6 +7,17 @@
 * Account statement (date, amount, balance) printing.
 * Data can be kept in memory (it doesn't need to be stored to a database or anything).
 
+### How to run
+```
+- clone this repo
+- run `bundle install`
+TESTS:
+
+run `rspec`
+run `rubocop`
+```
+
+
 ### Acceptance criteria
 
 **Given** a client makes a deposit of 1000 on 10-01-2012
