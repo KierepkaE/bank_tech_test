@@ -29,6 +29,8 @@ class AccountHistory
     [print_titles, print_logs]
   end
 
+  private
+
   def print_titles
     "date || credit || debit || balance\n"
   end

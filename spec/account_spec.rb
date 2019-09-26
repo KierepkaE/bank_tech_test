@@ -30,7 +30,7 @@ describe Account do
     date = Date.new(2019, 9, 26)
     account.add(500, date)
     expect(account.balance).to eq 500
-    expect(account.history_handler.show).to include(
+    expect(account.history).to include(
       date: date,
       amount: '500.00',
       debit: false,
