@@ -8,6 +8,14 @@ describe Account do
     expect(account.balance).to eq 0
   end
 
+  it 'can withdraw' do
+    account = Account.new
+    date = Date.new(2019,9,26)
+    account.add(1000,date)
+    account.withdraw(100,date)
+    expect(account.balance).to eq 900
+  end
+
 
 
   it 'can be given a deposit' do
