@@ -8,14 +8,13 @@
 * Data can be kept in memory (it doesn't need to be stored to a database or anything).
 
 ### How to run
-```
+
 - clone this repo
 - run `bundle install`
 TESTS:
 
 run `rspec`
 run `rubocop`
-```
 
 ```
 COVERAGE: 100%
